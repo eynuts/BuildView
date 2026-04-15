@@ -508,11 +508,11 @@
   .mobile-nav {
     display: flex;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 8px);
     left: 8px;
     width: calc(100% - 16px);
-    margin: 8px 0 0;
-    z-index: 999;
+    margin: 0;
+    z-index: 9999;
   }
   
   .hero {
