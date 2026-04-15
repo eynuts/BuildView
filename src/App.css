@@ -513,11 +513,12 @@
     width: calc(100% - 16px);
     margin: 0;
     z-index: 9999;
-    background: rgba(255, 255, 255, 0.15); /* Brighter base to counteract dark blending */
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    background: rgba(25, 35, 55, 0.85); /* Slate-blue frosted glass, not black */
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
   }
   
   .hero {
