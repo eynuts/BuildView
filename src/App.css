@@ -513,9 +513,11 @@
     width: calc(100% - 16px);
     margin: 0;
     z-index: 9999;
-    background: rgba(10, 15, 25, 0.95); /* Explicit dark solid background to prevent Vercel/Safari clipping */
+    background: rgba(255, 255, 255, 0.05); /* True glassmorphism fallback */
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   }
   
   .hero {
