@@ -7,6 +7,7 @@ import {
   Smartphone, 
   Download, 
   ChevronRight,
+  ChevronDown,
   Info,
   LayoutDashboard,
   Menu,
@@ -23,6 +24,7 @@ const App = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [scrollY, setScrollY] = useState(0);
+  const [showScrollIndicator, setShowScrollIndicator] = useState(true);
   const downloadLink = "https://github.com/eynuts/civilengr/releases/download/v1.0/BuildView.apk";
 
   useEffect(() => {
@@ -73,6 +75,12 @@ const App = () => {
       } else if (showScrollTop && window.scrollY <= 400) {
         setShowScrollTop(false);
       }
+      
+      // Hide scroll indicator after user scrolls down
+      if (showScrollIndicator && window.scrollY > 100) {
+        setShowScrollIndicator(false);
+      }
+      
       handleScrollReveal();
     };
 
@@ -179,6 +187,15 @@ const App = () => {
             </a>
           </div>
         </div>
+        {/* Scroll Indicator */}
+        {showScrollIndicator && (
+          <div className="scroll-indicator">
+            <div className="scroll-chevron">
+              <ChevronDown size={24} />
+            </div>
+            <div className="scroll-text">Scroll down</div>
+          </div>
+        )}
       </section>
 
       {/* Features Section */}
